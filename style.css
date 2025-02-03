@@ -1,0 +1,524 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  position: relative;
+  cursor: pointer;
+}
+#loader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #000;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  gap: 10px;
+}
+#loader h3 {
+  font-size: 2vw;
+}
+#page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: bisque;
+  position: relative;
+}
+#cursor {
+  height: 5vw;
+  width: 5vw;
+  background-color: #ff5f38;
+  border-radius: 50%;
+  /* position: fixed; */
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+#page1 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+#page1-content {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  color: #fff;
+}
+nav {
+  /* height: 100px; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vw 3vw;
+}
+nav h3 {
+  font-size: 1.4vw;
+  font-weight: 200;
+}
+nav h4 {
+  font-size: 1.4vw;
+  font-weight: 200;
+}
+#page1-content h1 {
+  font-size: 8vw;
+  text-align: center;
+  margin-top: 27vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 8.5vw;
+  font-weight: 550;
+}
+#page1-content h1 span {
+  display: inline-block;
+}
+/* <--------page2---------> */
+#page2 {
+  min-height: 100%;
+  width: 100%;
+}
+#page2 nav {
+  border-bottom: 1px solid black;
+  width: 90%;
+  margin-left: 6%;
+}
+#left-part {
+  margin-top: 2vw;
+  margin-left: 2vw;
+}
+#right-part {
+  margin-top: 2vw;
+  margin-right: 3.5vw;
+}
+
+#content-part {
+  font-size: 4.8vw;
+  padding-top: 4vw;
+  margin-left: 6.2vw;
+  padding-right: 3vw;
+  padding-bottom: 1vw;
+}
+/* <--------page3------> */
+
+#page3 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 3vw;
+}
+
+#page3-top {
+  text-align: center;
+}
+/* <------button-------> */
+
+button {
+  margin-top: 4vw;
+  margin-left: 40%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #18181a;
+  color: #18181a;
+  display: inline-block;
+  font-size: 25px;
+  line-height: 15px;
+  padding: 30px 80px 40px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  border-radius: 50px;
+}
+
+button span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+button span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+button:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+button:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+button:hover span:last-child {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+/* <--------button end----------> */
+
+#page3-top h4 {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  font-weight: 500;
+  font-size: 1vw;
+}
+#page3-top h4 span {
+  font-size: 0.7vw;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  padding: 3px 7px;
+}
+#page3-top h2 {
+  font-size: 4vw;
+  font-weight: 500;
+}
+#page3-top h3 {
+  font-size: 4vw;
+  font-weight: 500;
+}
+#pag3-elements {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6vw;
+}
+#pag3-elements .box {
+  height: 85%;
+  width: 32.5%;
+  position: relative;
+  border-radius: 10px;
+}
+#pag3-elements .box video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+#pag3-elements .box img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all ease 1s;
+  border-radius: 10px;
+}
+#pag3-elements .box:hover img {
+  opacity: 0;
+}
+/* <-------page4-----> */
+
+#page4 nav {
+  margin-left: 3.5vw;
+  padding-top: 4vw;
+  padding-bottom: 8vw;
+}
+#para {
+  margin-top: 2vw;
+  margin-left: 6vw;
+  font-size: 1.2vw;
+  padding-bottom: 4vw;
+  width: 90%;
+  border-bottom: 1px solid black;
+}
+#para h3 {
+  font-weight: 500;
+}
+#page4-content {
+  padding-top: 4vw;
+  font-size: 4.8vw;
+  margin-left: 6.2vw;
+  padding-right: 3vw;
+}
+/* <-------page5------> */
+#page5 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 4vw 0;
+}
+#page5 h1 {
+  font-size: 10vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: vw;
+  font-weight: 400;
+  border-bottom: 1px solid black;
+  width: 90%;
+  margin-left: 6%;
+}
+
+#page5 h1 span {
+  display: inline-block;
+}
+
+#page5-bottom {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  margin-top: 3vw;
+  color: #fff;
+}
+#top-part {
+  height: 38%;
+  width: 100%;
+  /* background-color: rgb(105, 155, 174); */
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5vw;
+}
+#top-part h3 {
+  font-size: 1.5vw;
+  padding: 0vw 2vw;
+  font-weight: 500;
+}
+#top-part h2 {
+  font-size: 2vw;
+  padding: 2vw 2vw;
+  font-weight: 500;
+}
+#right ul {
+  font-size: 1vw;
+  padding: 0vw 9vw;
+  margin-top: 2vw;
+}
+#right ul:hover {
+  color: #ff5f38;
+}
+/* <-------bus------> */
+
+.loader {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.truckWrapper {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  overflow-x: hidden;
+}
+/* truck upper body */
+.truckBody {
+  width: 130px;
+  height: fit-content;
+  margin-bottom: 6px;
+  animation: motion 1s linear infinite;
+}
+/* truck suspension animation*/
+@keyframes motion {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* truck's tires */
+.truckTires {
+  width: 130px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px 0px 15px;
+  position: absolute;
+  bottom: 0;
+}
+.truckTires svg {
+  width: 24px;
+}
+
+.road {
+  width: 100%;
+  height: 1.5px;
+  background-color: #282828;
+  position: relative;
+  bottom: 0;
+  align-self: flex-end;
+  border-radius: 3px;
+}
+.road::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background-color: #282828;
+  right: -50%;
+  border-radius: 3px;
+  animation: roadAnimation 1.4s linear infinite;
+  border-left: 10px solid white;
+}
+.road::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  background-color: #282828;
+  right: -65%;
+  border-radius: 3px;
+  animation: roadAnimation 1.4s linear infinite;
+  border-left: 4px solid white;
+}
+
+.lampPost {
+  position: absolute;
+  bottom: 0;
+  right: -90%;
+  height: 90px;
+  animation: roadAnimation 1.4s linear infinite;
+}
+
+@keyframes roadAnimation {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-350px);
+  }
+}
+
+/* <--------bus end ----> */
+
+#bottom-part h1 {
+  font-size: 19vw;
+  color: #fff;
+  padding-top: 0px;
+  margin-top: -90px;
+}
+
+@media (max-width: 600px) {
+  #page1-content nav h3 {
+    font-size: 4vw;
+    margin-top: 6vw;
+    font-weight: 700;
+    margin-left: 5vw;
+  }
+  #page1-content nav h4 {
+    font-size: 4vw;
+    margin-top: 6vw;
+    margin-right: 5vw;
+  }
+  #page1-content h1 {
+    font-size: 20vw;
+    margin-top: 78vw;
+    line-height: 19vw;
+  }
+  button {
+    margin-top: 8vw;
+    margin-left: 27%;
+    font-size: 25px;
+    padding: 20px 50px 20px;
+    cursor: pointer;
+  }
+
+  #page3-top h4 {
+    font-size: 3vw;
+  }
+  #page3-top h4 span {
+    font-size: 1.7vw;
+  }
+  #page3-top h2 {
+    font-size: 6vw;
+  }
+  #page3-top h3 {
+    font-size: 6vw;
+  }
+  #pag3-elements {
+    flex-direction: column;
+  }
+  #pag3-elements .box {
+    height: 50%;
+    width: 90%;
+  }
+  #page4 {
+    margin-top: 75vw;
+  }
+  #para {
+    font-size: 3vw;
+    padding-top: 8vw;
+  }
+  #page5-top h1 {
+    font-size: 15vw;
+  }
+  #left-part h3 {
+    font-size: 3vw;
+  }
+  #right-part h3 {
+    font-size: 3vw;
+  }
+  #left h2 {
+    font-size: 5vw;
+    padding-top: 15vw;
+  }
+  #left h3 {
+    font-size: 5vw;
+    padding-top: 6vw;
+  }
+  #right ul {
+    font-size: 4vw;
+    margin-top: 14vw;
+  }
+  .truckWrapper {
+    top: 12vw;
+  }
+  #bottom-part h1 {
+    font-size: 19vw;
+
+    padding-top: 10vw;
+    margin-top: 18vw;
+  }
+}
