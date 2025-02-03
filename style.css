@@ -451,6 +451,8 @@ button:hover span:last-child {
     font-size: 4vw;
     margin-top: 6vw;
     margin-right: 5vw;
+    font-weight: 700;
+
   }
   #page1-content h1 {
     font-size: 20vw;
@@ -459,7 +461,7 @@ button:hover span:last-child {
   }
   button {
     margin-top: 8vw;
-    margin-left: 27%;
+    margin-left: 24%;
     font-size: 25px;
     padding: 20px 50px 20px;
     cursor: pointer;
@@ -520,10 +522,6 @@ button:hover span:last-child {
 
     padding-top: 10vw;
     margin-top: 18vw;
-  }
-    #loader {
-    height: 100%;
-    width: 100%;
   }
   #loader h3 {
     font-size: 5vw;
