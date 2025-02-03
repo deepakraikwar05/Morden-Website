@@ -521,4 +521,11 @@ button:hover span:last-child {
     padding-top: 10vw;
     margin-top: 18vw;
   }
+    #loader {
+    height: 100%;
+    width: 100%;
+  }
+  #loader h3 {
+    font-size: 5vw;
+  }
 }
