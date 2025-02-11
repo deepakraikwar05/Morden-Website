@@ -10,6 +10,7 @@ body {
   font-family: sans-serif;
   position: relative;
   cursor: pointer;
+  overflow-x: hidden;
 }
 #loader {
   height: 100%;
@@ -519,11 +520,10 @@ button:hover span:last-child {
   }
   #bottom-part h1 {
     font-size: 19vw;
-
     padding-top: 10vw;
     margin-top: 18vw;
   }
   #loader h3 {
-    font-size: 5vw;
+    font-size: 4.5vw;
   }
 }
