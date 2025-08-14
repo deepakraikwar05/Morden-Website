@@ -43,7 +43,7 @@ body {
   color: #fff;
 }
 nav {
-  /* height: 100px; */
+ 
   width: 100%;
   display: flex;
   align-items: center;
@@ -58,21 +58,11 @@ nav h4 {
   font-size: 1.4vw;
   font-weight: 200;
 }
-/* #page1-content h1 {
-  font-size: 8vw;
-  text-align: center;
-  margin-top: 15vw;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  line-height: 8.5vw;
-  font-weight: 550;
-} */
+
 #page1-content h1 span {
   display: inline-block;
 }
-/* .mainvideo {
-  margin-left: 50%;
-  margin-top: 3vw;
-} */
+
 .mainvideo a {
   color: #fff;
   text-decoration: none;
@@ -951,7 +941,7 @@ button:hover span:last-child {
     font-size: 6vw;
     padding: 4vw 6vw;
   }
-  /* page5 */
+
   /* page5 */
   #page5-top h1 {
     font-size: 15vw;
